@@ -49,7 +49,7 @@ module WashOut
       if struct?
         data ||= {}
         if @multiplied
-          data.map do |x|
+          data.compact.map do |x|
             map_struct x do |param, dat, elem|
               param.load(dat, elem)
             end
